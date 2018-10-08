@@ -2,9 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
 
-  it "is valid with all attributes" do
+  it "has a valid factory" do
     recipe = FactoryBot.build(:recipe)
-    recipe.valid?
     expect(recipe).to be_valid
   end
 
