@@ -10,7 +10,7 @@
   user = User.create!(
     name: Faker::Name.name,
     email: "kendrick.lamar+#{u}@example-records.com",
-    password: "password-password-password"
+    #password: "password-password-password"
   )
 
   5.times do |r|
