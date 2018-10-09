@@ -20,12 +20,6 @@ RSpec.describe Recipe, type: :model do
         recipe.valid?
         expect(recipe.errors[:title]).to include("is too long (maximum is 100 characters)")
       end
-
-      it "is invalid with a title smaller than 10 characters" do
-        recipe = FactoryBot.build(:recipe, :tiny_title)
-        recipe.valid?
-        expect(recipe.errors[:title]).to include("is too short (minimum is 10 characters)")
-      end
     end
 
     context "description" do
@@ -36,9 +30,6 @@ RSpec.describe Recipe, type: :model do
       end
     end
 
-    # and so on ...
   end
-
-  # test model associations below ...
 
 end

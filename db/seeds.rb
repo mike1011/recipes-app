@@ -8,15 +8,14 @@
 
 15.times do |u|
   user = User.create!(
-    name: Faker::Name.name,
+    name: "Chef #{Faker::Name.name}",
     email: "kendrick.lamar+#{u}@example-records.com",
-    #password: "password-password-password"
   )
 
   5.times do |r|
     user.recipes.create!(
-      title: Faker::Lorem.sentence,
-      description: Faker::Lorem.paragraph(2, true, 5),
+      title: Faker::Food.dish,
+      description: Faker::Food.description,
       total_people: Faker::Number.between(1, 8),
       preparation_time: Faker::Number.between(20, 120)
     )

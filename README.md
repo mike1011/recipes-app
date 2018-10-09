@@ -1,24 +1,30 @@
-# README
+# Recipes App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a simple example of a recipes data repository app.
 
-Things you may want to cover:
+It's made to practice basic Ruby on Rails concepts.
 
-* Ruby version
+Each Recipe belongs to a User (the cook) and each cook may have many recipes
+associated with his name.
 
-* System dependencies
+Any anonymous user can add a new recipe to the system.
 
-* Configuration
+The recipes have some data specific data:
+- Title
+- Description
+- Total of people
+- Preparation time
+- Claps
 
-* Database creation
+Claps are an integer and are a way for anonymous users to thank for the recipe if
+they enjoyed it.
 
-* Database initialization
+Routes available:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Prefix  | Verb | URI Pattern            | Controller#Action |
+|---------|------|------------------------|-------------------|
+| users   | GET  | /users(.:format)       | users#index       |
+| user    | GET  | /users/:id(.:format)   | users#show        |
+| recipes | GET  | /recipes(.:format)     | recipes#index     |
+|         | POST | /recipes(.:format)     | recipes#create    |
+| recipe  | GET  | /recipes/:id(.:format) | recipes#show      |

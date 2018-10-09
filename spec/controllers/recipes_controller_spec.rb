@@ -35,12 +35,5 @@ RSpec.describe RecipesController, type: :controller do
       recipes_list = JSON.parse(response.body)
       expect(recipes_list.length).to eq(20)
     end
-
-    it "has user's list of recipes" do
-      user = FactoryBot.create(:user, :with_recipes)
-      get :index, params: { user_id: user.id }
-      recipes_list = JSON.parse(response.body)
-      expect(recipes_list.length).to eq(8)
-    end
   end
 end

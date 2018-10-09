@@ -4,7 +4,7 @@ RSpec.describe UsersController, type: :controller do
 
   describe "GET #show" do
     before do
-      @user = FactoryBot.create(:user)
+      @user = FactoryBot.create(:user, :with_recipes)
     end
 
     it "returns http success" do
@@ -16,6 +16,12 @@ RSpec.describe UsersController, type: :controller do
       get :show, params: { id: @user.id }
       user_detail = JSON.parse(response.body)
       expect(user_detail["name"]).to eq(@user.name)
+    end
+
+    it "includes the user's recipes list" do
+      get :show, params: { id: @user.id }
+      user_detail = JSON.parse(response.body)
+      expect(user_detail["recipes"].length).to eq(8)
     end
 
   end
