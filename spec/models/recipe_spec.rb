@@ -7,6 +7,11 @@ RSpec.describe Recipe, type: :model do
     expect(recipe).to be_valid
   end
 
+  it "increments counter when clapped" do
+    recipe = FactoryBot.create(:recipe)
+    expect { recipe.clap }.to change(recipe, :claps).by(1)
+  end
+
   describe "basic attributes' validations" do
     context "title" do
       it "is invalid without a title" do
@@ -29,7 +34,6 @@ RSpec.describe Recipe, type: :model do
         expect(recipe.errors[:description]).to include("can't be blank")
       end
     end
-
   end
 
 end
