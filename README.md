@@ -28,3 +28,7 @@ Routes available:
 | recipes | GET  | /recipes(.:format)     | recipes#index     |
 |         | POST | /recipes(.:format)     | recipes#create    |
 | recipe  | GET  | /recipes/:id(.:format) | recipes#show      |
+|         | PUT  | /recipes/:id(.:format) | recipes#update    |
+
+The last route increments the claps total for a recipe, as we don't allow
+recipes edition for now.

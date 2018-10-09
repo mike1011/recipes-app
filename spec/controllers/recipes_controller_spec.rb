@@ -36,4 +36,35 @@ RSpec.describe RecipesController, type: :controller do
       expect(recipes_list.length).to eq(20)
     end
   end
+
+  describe "#update" do
+    before do
+      @recipe = FactoryBot.create(:recipe)
+    end
+
+    it "responds successfully" do
+      put :update, params: { id: @recipe.id }
+      expect(response).to be_success
+    end
+
+    it "increments the recipe's total claps" do
+      recipe = FactoryBot.create(:recipe)
+      expect {
+        put :update, params: { id: recipe.id }
+        recipe.reload
+      }.to change(recipe, :claps).by(1)
+    end
+  end
+
+  describe "#create" do
+    it "creates a new recipe" do
+      user = FactoryBot.create(:user)
+      recipe_params = FactoryBot.attributes_for(:recipe, user_id: user.id)
+
+      expect {
+        post :create, params: { recipe: recipe_params }
+      }.to change(user.recipes, :count).by(1)
+    end
+  end
+
 end
