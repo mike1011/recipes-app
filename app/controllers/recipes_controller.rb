@@ -6,8 +6,13 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all
-    render json: @recipes
+    if params.has_key?(:user_id)
+      user = User.find(params[:user_id])
+      recipes = user.recipes
+    else
+      recipes = Recipe.all
+    end
+    render json: recipes
   end
 
   def create
