@@ -7,7 +7,7 @@ It's made to practice basic Ruby on Rails (API) and React (frontend) concepts.
 The React app is inside the `recipes-frontend` folder and is separate from the
 mains Ruby on Rails project.
 
-## Context
+## 📘 Context
 
 Each Recipe belongs to a User (the cook) and each cook may have many recipes
 associated with him. Any anonymous user can add a new recipe from its
@@ -23,7 +23,7 @@ The recipes have some data specific data:
 Claps are an integer and are a way for anonymous users to thank for the recipe if
 they enjoyed it.
 
-## API Routes
+## 🛣 API Routes
 
 | Prefix       | Verb | URI Pattern                       | Controller#Action |
 |------------- |------|-----------------------------------|-------------------|
@@ -38,7 +38,7 @@ they enjoyed it.
 The last route increments the claps total for a recipe, as we don't allow
 recipes edition for now.
 
-## Frontend Use Cases
+## 🖥 Frontend Use Cases
 
 - Enqueue multiple new Recipes in the syncing list.
 - Sync (publish) an enqueued Recipe.
