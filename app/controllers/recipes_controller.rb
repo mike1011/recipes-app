@@ -11,7 +11,8 @@ class RecipesController < ApplicationController
     else
       recipes = Recipe.all
     end
-    render json: recipes
+
+    render json: recipes.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
   end
 
   def create
