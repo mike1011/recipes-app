@@ -21,14 +21,15 @@ they enjoyed it.
 
 Routes available:
 
-| Prefix  | Verb | URI Pattern            | Controller#Action |
-|---------|------|------------------------|-------------------|
-| users   | GET  | /users(.:format)       | users#index       |
-| user    | GET  | /users/:id(.:format)   | users#show        |
-| recipes | GET  | /recipes(.:format)     | recipes#index     |
-|         | POST | /recipes(.:format)     | recipes#create    |
-| recipe  | GET  | /recipes/:id(.:format) | recipes#show      |
-|         | PUT  | /recipes/:id(.:format) | recipes#update    |
+| Prefix       | Verb | URI Pattern                       | Controller#Action |
+|------------- |------|-----------------------------------|-------------------|
+| user_recipes | GET  | /users/:user_id/recipes(.:format) | recipes#index     |
+| users        | GET  | /users(.:format)                  | users#index       |
+| user         | GET  | /users/:id(.:format)              | users#show        |
+| recipes      | GET  | /recipes(.:format)                | recipes#index     |
+|              | POST | /recipes(.:format)                | recipes#create    |
+| recipe       | GET  | /recipes/:id(.:format)            | recipes#show      |
+|              | PUT  | /recipes/:id(.:format)            | recipes#update    |
 
 The last route increments the claps total for a recipe, as we don't allow
 recipes edition for now.

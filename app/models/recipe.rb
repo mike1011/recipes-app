@@ -8,7 +8,6 @@ class Recipe < ApplicationRecord
   validates :preparation_time, numericality: { only_integer: true, greater_than: 0 }
 
   def clap
-    self.claps += 1
-    self.save
+    update(claps: claps+1)
   end
 end
