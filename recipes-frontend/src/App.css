@@ -1,0 +1,70 @@
+.container input, .container textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.content {
+  margin-left: 50px;
+  padding-top: 20px;
+  border: 1px dashed grey;
+}
+
+.editor-preview h1, .editor-preview h2 {
+  text-align: center;
+}
+
+.editor-preview h2 {
+  font-weight: 300;
+}
+
+.content p {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.sync-button {
+  margin-right: 5px;
+}
+
+.synced-text {
+  text-decoration: line-through;
+  color: grey;
+  font-style: italic;
+}
+
+section ul li {
+  margin-top: 10px;
+}
+
+.icon-rotate-sync {
+  animation: App-logo-spin infinite 2s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pagination-container {
+  margin-top: 20px;
+}
+
+.pagination-container button {
+  margin-right: 10px;
+}
+
+ul.published-recipes {
+  list-style: inside;
+}
+
+.claps-button {
+  margin-left: 5px;
+}
