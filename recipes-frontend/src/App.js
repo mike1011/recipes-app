@@ -143,7 +143,7 @@ class App extends Component {
       'total_people': this.state.formData.total_people,
       'preparation_time': this.state.formData.preparation_time,
       'is_synced': false,
-      'cook_id': this.state.formData.cook_id
+      'cook_id': this.state.formData.cook_id,
     }
     const updatedRecipes = addRecipe(this.state.recipes, newRecipe)
     this.setState({
@@ -215,7 +215,7 @@ class App extends Component {
                 <PublishedRecipes recipes={this.state.publishedRecipes}/>
 
                 <div className="pagination-container">
-                  <button className="button is-small" disabled={ this.state.page == 1 } onClick={this.handlePreviousPage}>Previous</button>
+                  <button className="button is-small" disabled={ this.state.page === 1 } onClick={this.handlePreviousPage}>Previous</button>
                   <button className="button is-small" disabled={ this.state.publishedRecipes.length < 5 } onClick={this.handleNextPage}>Next page</button>
                 </div>
               </div>

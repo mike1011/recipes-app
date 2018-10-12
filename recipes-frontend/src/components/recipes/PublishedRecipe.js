@@ -27,9 +27,9 @@ class PublishedRecipe extends React.Component {
   render() {
     return (
       <li key={this.props.id}>
-        {this.props.title} ({this.state.claps} {pluralize('claps', this.state.claps)})
+        <strong>{this.props.title}</strong> <small>by {this.props.cook_name}</small>
         <button onClick={() => this.sendClap(this.props)} className="button is-small is-rounded claps-button">
-          <i className="fas fa-sign-language"></i>
+          <span>{this.state.claps}</span> <span className="icon"><i className="fas fa-sign-language"></i></span>
         </button>
       </li>
     )

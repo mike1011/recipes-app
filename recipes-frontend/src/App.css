@@ -68,3 +68,7 @@ ul.published-recipes {
 .claps-button {
   margin-left: 5px;
 }
+
+.claps-button i {
+  font-size: 18px;
+}
