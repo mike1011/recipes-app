@@ -4,6 +4,15 @@ This app is a simple example of a recipes data repository app.
 
 It's made to practice basic Ruby on Rails (API) and React (frontend) concepts.
 
+The next list mentions some topics that are covered in this app's backend:
+
+* RSpec
+* Serializers
+* Pagination
+* Validations
+* Associations
+* Factories (and Faker)
+
 The React app is inside the `recipes-frontend` folder and is separate from the
 mains Ruby on Rails project.
 
