@@ -56,3 +56,7 @@ recipes edition for now.
 
 The frontend app may be started with `yarn start`, after installing all the dependencies.
 By default, it'll run in port 4000, to avoid conflicts with the Rails' default port (3000).
+
+## 📸 Screenshot
+
+<img src="https://i.imgur.com/nOGzTJ4.png" alt="Recipes App Screenshot">
